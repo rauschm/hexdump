@@ -1,0 +1,13 @@
+int main(int argc, char* argv[]);
+void dumpNamedFile(char* fileName);
+void dumpFile(FILE* f, char* fileName);
+void dumpBuffer(int fileOffset, unsigned char* buffer, int bufferLength);
+void dumpLine(int fileOffset, unsigned char* buffer, int availableCharsInBuffer);
+void dumpCharAsHex(char* hexArea, unsigned char c);
+void dumpCharAsAscii(char* asciiArea, unsigned char c);
+void usage(void);
+FILE* openFile(char* fileName);
+FILE* useStdin(void);
+void closeFile(FILE* f);
+void checkFileError(FILE* f, char* fileName);
+void exitWithErrorMessage(char* format, ...);
